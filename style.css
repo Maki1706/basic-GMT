@@ -128,7 +128,8 @@ img {
 
 /* header */
 .header {
-	background: var(--dark);
+	background: transparent;
+	padding: 2rem;
 	position: relative;
 	position: fixed;
 	width: 100%;
@@ -213,7 +214,7 @@ img {
 
 @media screen and (max-width: 500px) {
 	.header__nav {
-		background: pink;
+		background: black;
 		position: absolute;
 		top: 0rem;
 		width: 100%;
@@ -224,6 +225,7 @@ img {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		opacity: 75%;
 	}
 
 	.header__nav ul.nav {
@@ -252,16 +254,23 @@ img {
 	}
 	.header__nav.open {
 		right: 0rem;
-		transition: 5s ease;
+		transition: 0.5s ease;
 	}
 
 	.header__nav {
 		right: -100rem;
-		transition: 5s ease;
+		transition: 0.5s ease;
 	}
-
-	
 }
+
+/* BANNER AHAHHAHAHHAHAHAHAHHAHAHHAHAHHA */
+.banner {
+	background-image: url("img/banner_home_v1.jpg");
+	background-size: cover;
+	height: 100vh;
+	background-position: center center;
+}
+
 /* repeatable pattern */
 :root {
 	--light: #ffffff;
