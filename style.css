@@ -133,7 +133,10 @@ img {
 	position: relative;
 	position: fixed;
 	width: 100%;
+	z-index: 999;
 }
+
+
 
 .header__nav ul {
 	display: flex;
@@ -214,7 +217,7 @@ img {
 
 @media screen and (max-width: 500px) {
 	.header__nav {
-		background: black;
+		background: var(--dark);
 		position: absolute;
 		top: 0rem;
 		width: 100%;
@@ -225,7 +228,7 @@ img {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		opacity: 75%;
+		opacity: 100%;
 	}
 
 	.header__nav ul.nav {
@@ -269,7 +272,322 @@ img {
 	background-size: cover;
 	height: 100vh;
 	background-position: center center;
+	position: relative;
+  display: flex;
+  align-items: center;
 }
+.banner__faq {
+	background: var(--light);
+	width: fit-content;
+	padding: 2.5rem 4rem;
+	border-top-left-radius: 4rem;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+  }
+  .banner__faq a {
+	display: flex;
+	text-align: center;
+	gap: 2rem;
+	color: var(--dark);
+	font-size: 1.5rem;
+	font-weight: 600;
+  }
+  .banner__faq a:hover {
+	color: var(--primary);
+  }
+  .banner__faq a i {
+	transition: 0.5s ease;
+  }
+  .banner__faq a:hover i {
+	transform: translateX(1rem);
+	transition: 0.5s ease;
+  }
+  .banner__text ul.social {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+  }
+  .banner__text ul.social li a {
+	color: var(--light);
+	font-size: 3rem;
+  }
+  .banner__text {
+	max-width: 65rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	
+  }
+  .banner__text h1 {
+	font-size: 5rem;
+	color: var(--light);
+	font-weight: 600;
+  }
+  .banner__text p {
+	color: var(--light);
+	font-size: 2rem;
+  }
+  .banner__text ul.dutdot {
+	display: flex;
+	gap: 3rem;
+	
+  }
+
+  .banner {
+    position: relative;
+    z-index: 1;
+}
+
+  /* BANNER MOBIL */
+
+@media screen and (max-width: 500px) {
+	.banner__text h1 {
+	  font-size: 4rem;
+	  text-align: center;
+	}
+	.banner__text p {
+	  font-size: 1.5rem;
+	  font-weight: 600;
+	  text-align: center;
+	}
+	.banner__text ul.dutdot {
+	  display: flex;
+	  flex-direction: column;
+	  text-align: center;
+	}
+	.banner__text ul.dutdot li a {
+	  width: 80%;
+	}
+	.banner__text ul.social {
+	  justify-content: center;
+	}
+	.banner__faq {
+	  width: 100%;
+	  border-top-left-radius: 0rem;
+	}
+	.banner__faq a {
+	  justify-content: center;
+	}
+	.banner__text {
+	  display: flex;
+	  gap: 1rem;
+	}
+  }
+
+  .offer {
+	height: 80vh;
+	background-position: center center;
+	position: relative;
+	display: flex;
+	align-items: center;
+  }
+  .offer__text {
+	max-width: 55rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+  }
+  .offer__text h2 {
+	font-size: 5rem;
+	color: var(--primary);
+	font-weight: 600;
+  }
+  .offer__text p {
+	color: var(--dark);
+	font-size: 1.6rem;
+  }
+  .offer__text a {
+	gap: 2rem;
+	color: var(--light);
+	font-size: 1rem;
+	font-weight: 600;
+	background: var(--primary);
+	width: fit-content;
+	padding: 0.9rem 1rem;
+	border-radius: 5rem;
+  }
+  .offer__price {
+	position: absolute;
+	bottom: 30rem;
+	right: 40rem;
+  }
+  .offer__price h3 {
+	color: var(--secondary);
+	font-size: 3.7rem;
+	font-weight: 800;
+	display: flex;
+	text-align: center;
+	gap: 2rem;
+  }
+  .offer__price__bot h3 {
+	position: absolute;
+	bottom: -0rem;
+	right: 8rem;
+	font-size: 15rem;
+	font-weight: 800;
+	display: flex;
+	text-align: center;
+	gap: 2rem;
+	color: var(--primary);
+  }
+  .offer__price__bot h4 {
+	font-weight: 800;
+	font-size: 3.7rem;
+	bottom: -9rem;
+	right: 10rem;
+	color: var(--primary);
+  }
+  .offer_cents h4 {
+	bottom: 9rem;
+	right: -8rem;
+	color: var(--primary);
+  }
+  @media screen and (max-width: 500px) {
+	.offer__text h2 {
+	  font-size: 4rem;
+	  text-align: center;
+	}
+	.offer__text p {
+	  font-size: 1.5rem;
+	  font-weight: 500;
+	}
+	.offer__text a {
+	  justify-content: center;
+	  font-size: 1.3rem;
+	  padding: 1.2rem 13em;
+	  border-radius: 5rem;
+	}
+  }
+
+  .how {
+	background: var(--primary);
+  }
+  .how__wrapper {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	min-height: 500px;
+  }
+  .how__ate {
+	background-image: url("img/different_img.jpg");
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+  }
+  .how__text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 75rem;
+	margin: 0 auto;
+  }
+  .how__text h2 {
+	color: var(--light);
+	font-size: 4rem;
+	font-weight: 600;
+  }
+  .how__text p {
+	color: var(--light);
+  }
+  @media screen and (max-width: 500px) {
+	.how__wrapper {
+	  display: grid;
+	  grid-template-columns: 2fr;
+	}
+	.how__ate {
+	  display: none;
+	}
+	.how__text h2 {
+	  font-size: 3rem;
+	  gap: 2rem;
+	  max-width: 75rem;
+	  margin: 0 auto;
+	}
+	.how__text p {
+	  text-align: justify;
+	  font-weight: 500;
+	  margin: 2rem;
+	  gap: 1rem;
+	}
+	/* RECOMENDED */
+  }
+
+  .recommended {
+	justify-content: center;
+	display: grid;
+	grid-template-columns: 2fr;
+	place-items: center;
+	min-height: 400px;
+	gap: 2rem;
+	max-width: 75rem;
+	margin: 0 auto;
+  }
+  
+  .recommended__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+  }
+  
+  .recommended__sulat h5 {
+	color: var(--primary);
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	font-weight: 900;
+	font-size: 4rem;
+	max-width: 50rem;
+	margin: 1;
+	justify-content: center;
+  }
+  .bttn {
+	display: flex;
+  }
+
+  .btn {
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+	border-radius: 5rem;
+	border: 1px solid transparent;
+	transition: 0.5 ease;
+	text-align: center;
+  }
+  .btn:hover {
+	scale: 1.1;
+	transition: 0.5s ease;
+  }
+  .btn.bg--primary {
+	background: var(--primary);
+	color: var(--light);
+	font-size: 1 rem;
+	font-weight: 600;
+  }
+  .btn.bg--light {
+	background: var(--light);
+	color: var(--primary);
+	font-size: 1 rem;
+	font-weight: 600;
+  }
+  .btn.bg--light:hover {
+	background: var(--primary);
+	transition: 0.5s ease;
+	color: var(--light);
+  }
+
+  /* footer */
+  .footer{
+	background-color: #134a8c;
+    height: 30rem;
+	width: 200rem;
+  }
+ .nav{
+	align-content: center;
+ }
+
+
 
 /* repeatable pattern */
 :root {
@@ -277,4 +595,5 @@ img {
 	--dark: #2b2b2b;
 	--primary: #134a8c;
 	--blud: red;
+	--secondary: #e8751a;
 }
